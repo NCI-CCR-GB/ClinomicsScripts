@@ -1,0 +1,15 @@
+
+## Notes regarding creating ensGene Hg19 coding exon bed track
+## The procedure will be replaced by script
+## Jack Zhu, 03012015
+#
+# download ensGene Hg19 coding exon bed track from: http://genome.ucsc.edu/cgi-bin/hgTables
+# created merged track by Galaxy
+# coverted to gff format using Galaxy
+# removed non-regular chromsomes using the following command
+
+   grep -v "^chr[Un0-9XY]*_" enGene.cds.hg19.bed > enGene.cleaned.cds.hg19.bed
+
+# sort the bed tracks using betools sort 
+
+   bedtools sort -chrThenSizeA -i enGene.cleaned.cds.hg19.bed > enGene.cleaned.sorted.cds.hg19.bed
