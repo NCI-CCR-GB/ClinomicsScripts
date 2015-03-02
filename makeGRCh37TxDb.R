@@ -52,7 +52,7 @@ makeTxDbPackageFromBiomart = function (version, maintainer, author, destDir = ".
                   author = author, destDir = destDir, license = license)
 }
 
-makeTxDbPackageFromBiomart(version='GRCh37_75',
+makeTxDbPackageFromBiomart(version='1.0.0',
                            maintainer='Sean Davis <seandavi@gmail.com>',
                            author='Sean Davis',
                            biomart='ENSEMBL_MART_ENSEMBL',host='grch37.ensembl.org',
